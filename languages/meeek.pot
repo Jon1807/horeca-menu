@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-28 23:51+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: widgets/meeek-about-me.php:31
+msgid "Meeek - About Me"
+msgstr ""
+
+#: widgets/meeek-about-me.php:104 widgets/meeek-bio-links.php:104
+msgid "Content Section"
+msgstr ""
+
+#: widgets/meeek-about-me.php:112
+msgid "Choose Image"
+msgstr ""
+
+#: widgets/meeek-about-me.php:124
+msgid "Image Dimensions"
+msgstr ""
+
+#: widgets/meeek-about-me.php:137
+msgid "Image Alignment"
+msgstr ""
+
+#: widgets/meeek-about-me.php:140 widgets/meeek-about-me.php:195
+#: widgets/meeek-about-me.php:267 widgets/meeek-social-media-links.php:142
+msgid "Left"
+msgstr ""
+
+#: widgets/meeek-about-me.php:144 widgets/meeek-about-me.php:199
+#: widgets/meeek-about-me.php:271 widgets/meeek-social-media-links.php:146
+msgid "Center"
+msgstr ""
+
+#: widgets/meeek-about-me.php:148 widgets/meeek-about-me.php:203
+#: widgets/meeek-about-me.php:275 widgets/meeek-social-media-links.php:150
+msgid "Right"
+msgstr ""
+
+#: widgets/meeek-about-me.php:160
+msgid "Title"
+msgstr ""
+
+#: widgets/meeek-about-me.php:163
+msgid "Your main title goes here."
+msgstr ""
+
+#: widgets/meeek-about-me.php:179
+msgid "Title Color"
+msgstr ""
+
+#: widgets/meeek-about-me.php:192
+msgid "Title Alignment"
+msgstr ""
+
+#: widgets/meeek-about-me.php:215
+msgid "Title Padding"
+msgstr ""
+
+#: widgets/meeek-about-me.php:231 widgets/meeek-bio-links.php:171
+msgid "Description"
+msgstr ""
+
+#: widgets/meeek-about-me.php:235 widgets/meeek-bio-links.php:173
+msgid "Your description goes here."
+msgstr ""
+
+#: widgets/meeek-about-me.php:251
+msgid "Description Color"
+msgstr ""
+
+#: widgets/meeek-about-me.php:264
+msgid "Description Alignment"
+msgstr ""
+
+#: widgets/meeek-about-me.php:287 widgets/meeek-bio-links.php:181
+msgid "Description Padding"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:31
+msgid "Meeek - Bio Links"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:112
+msgid "Version"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:116
+msgid "v1"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:117
+msgid "v2"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:118
+msgid "v3"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:119
+msgid "v4"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:120
+msgid "v5"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:121
+msgid "v6"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:122
+msgid "v7"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:123
+msgid "v8"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:133
+msgid "Card Color"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:144
+msgid "Image"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:155 widgets/meeek-social-media-links.php:162
+msgid "Link"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:157 widgets/meeek-social-media-links.php:164
+msgid "https://your-link.com"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:197
+msgid "Button Text"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:200
+msgid "Type your title here"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:207
+msgid "Button Color"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:215 widgets/meeek-social-media-links.php:125
+msgid "Icon"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:224
+msgid "Icon Color"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:233 widgets/meeek-social-media-links.php:179
+msgid "Menu Items"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:238
+msgid "Basic Description and More"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:241
+msgid "The Best Capussino Blends"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:244
+msgid "Arts: Sailing Rivers Painting"
+msgstr ""
+
+#: widgets/meeek-bio-links.php:247
+msgid "One of the Fine Diamond"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:31
+msgid "Meeek - Social Media Links"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:104
+msgid "Meeek Social Icons"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:112
+msgid "Color"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:139
+msgid "Icons Alignment"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:184
+msgid "List Item #1"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:191
+msgid "List Item #2"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:198
+msgid "List Item #3"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:205
+msgid "List Item #4"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:212
+msgid "List Item #5"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:219
+msgid "List Item #6"
+msgstr ""
+
+#: widgets/meeek-social-media-links.php:226
+msgid "List Item #7"
+msgstr ""
