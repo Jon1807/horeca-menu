@@ -101,7 +101,7 @@ class Horeca_Social_Media_Links extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'Meeek Social Icons', 'horeca' ),
+				'label' => esc_html__( 'Horeca Social Icons', 'horeca' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
