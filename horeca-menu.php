@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Horeca Menu
- * Description: The creator of your personal menu website.
+ * Description: Food Menu Plugin for Hotels, Restaurants and Coffee Shops..
  * Plugin URI:  http://horeca.modeltheme.com/
  * Version:     1.0.0
  * Author:      Modeltheme
@@ -27,19 +27,19 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return void
  */
 
-function register_horeca_custom_widgets( $widgets_manager ) {
+function horeca_custom_widgets( $widgets_manager ) {
 
-    require_once( __DIR__ . '/widgets/social-media-links/horeca-social-media-links.elementor.php' );
-    require_once( __DIR__ . '/widgets/menu-items/horeca-menu-items.elementor.php' );
+    require_once( __DIR__ . '/widgets/social-media-links/social-media-links.elementor.php' );
+    require_once( __DIR__ . '/widgets/menu-items/menu-items.elementor.php' );
     
     $widgets_manager->register( new \Horeca_Social_Media_Links() );
     $widgets_manager->register( new \Horeca_Menu_Items() );
 }
-add_action( 'elementor/widgets/register', 'register_horeca_custom_widgets' );
+add_action( 'elementor/widgets/register', 'horeca_custom_widgets' );
 
 function horeca_bio_links_styles() {
-    wp_enqueue_style( 'horeca-menu-items', plugins_url( 'assets/css/horeca-menu-items.css', __FILE__ ), array(), '1.0.0', 'all' );
-    wp_enqueue_style( 'horeca-social-media-links', plugins_url( 'assets/css/horeca-social-media-links.css', __FILE__ ), array(), '1.0.0', 'all' );
+    wp_enqueue_style( 'horeca-menu-items', plugins_url( 'assets/css/menu-items.css', __FILE__ ), array(), '1.0.0', 'all' );
+    wp_enqueue_style( 'horeca-social-media-links', plugins_url( 'assets/css/social-media-links.css', __FILE__ ), array(), '1.0.0', 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'horeca_bio_links_styles' );
 
@@ -55,5 +55,5 @@ function horeca_load_textdomain(){
 }
 add_action( 'plugins_loaded', 'horeca_load_textdomain' );
 
-require_once( __DIR__ . '/widgets/social-media-links/horeca-social-media-links.shortcode.php' );
-require_once( __DIR__ . '/widgets/menu-items/horeca-menu-items.shortcode.php' );
+require_once( __DIR__ . '/widgets/social-media-links/social-media-links.shortcode.php' );
+require_once( __DIR__ . '/widgets/menu-items/menu-items.shortcode.php' );
