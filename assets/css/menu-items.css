@@ -192,6 +192,8 @@
   flex-direction: row;
   width: 100%;
   padding:10px 40px;
+  border:1px solid #000;
+  margin-bottom:10px;
 }
 .horeca-menu-items-inner-container-v3 .horeca-menu-items-img-holder img{
   max-width: fit-content;
