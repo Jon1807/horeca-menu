@@ -5,10 +5,7 @@
   display: none;
 }
 
-#horeca-menu-tab1:checked ~ section .horeca-menu-tab1,
-#horeca-menu-tab2:checked ~ section .horeca-menu-tab2,
-#horeca-menu-tab3:checked ~ section .horeca-menu-tab3,
-#horeca-menu-tab4:checked ~ section .horeca-menu-tab4 {
+#horeca-menu-tab1:checked ~ section .horeca-menu-tab1 {
   display: block;
   columns: 2;
 }
@@ -32,26 +29,11 @@
 .horeca-menu-label{
 	cursor: pointer;
 }
-#horeca-menu-tab1:checked ~ nav .horeca-menu-tab1 label,
-#horeca-menu-tab2:checked ~ nav .horeca-menu-tab2 label,
-#horeca-menu-tab3:checked ~ nav .horeca-menu-tab3 label,
-#horeca-menu-tab4:checked ~ nav .horeca-menu-tab4 label {
-  color:#B89C73;
-  position: relative;
-  border-bottom: 2px solid #B89C73;
-}
-#horeca-menu-tab1:checked ~ nav .horeca-menu-tab1 label:hover,
-#horeca-menu-tab2:checked ~ nav .horeca-menu-tab2 label:hover,
-#horeca-menu-tab3:checked ~ nav .horeca-menu-tab3 label:hover,
-#horeca-menu-tab4:checked ~ nav .horeca-menu-tab4 label:hover {
- 
+
 }
 @media screen and (max-width: 768px) {
 
-	#horeca-menu-tab1:checked ~ section .horeca-menu-tab1,
-	#horeca-menu-tab2:checked ~ section .horeca-menu-tab2,
-	#horeca-menu-tab3:checked ~ section .horeca-menu-tab3,
-	#horeca-menu-tab4:checked ~ section .horeca-menu-tab4 {
+	#horeca-menu-tab1:checked ~ section .horeca-menu-tab1{
 	  display: table;
 	  columns: 2;
 	}
@@ -72,17 +54,6 @@
 .horeca-menu-items-inner-heading{
 	border-bottom: 1px solid #444;
 	margin: 20px 0 10px;
-}
-
-.horeca-menu-items-separator{
-	width: 100%!important;
-	border-width:1px;
-}
-.horeca-menu-items-inner-separator{
-	width: 100%;
-  display: flex;
-  margin: 0;
-  direction: ltr;
 }
 
 /*dish items v1*/
