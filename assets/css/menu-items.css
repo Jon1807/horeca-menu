@@ -7,7 +7,6 @@
 
 #horeca-menu-tab1:checked ~ section .horeca-menu-tab1 {
   display: block;
-  columns: 2;
 }
 .horeca-menu-tab ul {
   list-style: none;
