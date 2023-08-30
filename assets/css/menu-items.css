@@ -54,7 +54,15 @@
 	border-bottom: 1px solid #444;
 	margin: 20px 0 10px;
 }
-
+.horeca-menu-items-badges{
+	padding: 5px 0px;
+}
+.horeca-svg{
+	border: 1px solid #000;
+  border-radius: 50px;
+  font-size: 25px;
+  padding: 2px;
+}
 /*dish items v1*/
 
 .horeca-menu-items-inner-container-v1{

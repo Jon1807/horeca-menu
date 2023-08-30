@@ -221,6 +221,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Heading', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
+				'condition' => [
+					'item_type' => 'heading',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -229,6 +232,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Dish Heading', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'placeholder' => esc_html__( 'Your heading goes here.', 'horeca' ),
+				'condition' => [
+					'item_type' => 'heading',
+				],
 			],
 		);
 		$repeater->add_control(
@@ -237,6 +243,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Heading Font size', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'default' => '30',
+				'condition' => [
+					'item_type' => 'heading',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -245,6 +254,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
              'label' => esc_html__('Heading Font weight', 'horeca'),
              'label_block' => true,
              'type' => \Elementor\Controls_Manager::SELECT,
+             'condition' => [
+					'item_type' => 'heading',
+				],
              'options' => [
                  '' => __('Select', 'horeca'),
                  '400' => __('400', 'horeca'),
@@ -261,6 +273,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Heading Color', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
+				'condition' => [
+					'item_type' => 'heading',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -269,6 +284,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Image Settings', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -276,6 +294,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Image', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -283,6 +304,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 		  [
 		    'type' => \Elementor\Controls_Manager::IMAGE_DIMENSIONS,
 		    'label' => __( 'Image Dimensions', 'horeca' ),
+		    'condition' => [
+				'item_type' => 'product',
+			],
 		    'default' => [
 		      'width' => '100',
 		      'height' => '100',
@@ -296,6 +320,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Title', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -305,6 +332,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'placeholder' => esc_html__( 'Your description goes here.', 'horeca' ),
 				'default' => 'Greek Salad',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			],
 		);
 		$repeater->add_control(
@@ -313,6 +343,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Title Font size', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'default' => '20',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -330,6 +363,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
                  '800' => __('800', 'horeca'),
              ],
              'default' => '500',
+             'condition' => [
+					'item_type' => 'product',
+				],
          ]
       	);
 		$repeater->add_control(
@@ -337,6 +373,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Title Color', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -345,6 +384,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Price', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -354,6 +396,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'placeholder' => esc_html__( 'Dish Price goes here.', 'horeca' ),
 				'default' => '25.50',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			],
 		);
 		$repeater->add_control(
@@ -362,6 +407,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Price Font size', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'default' => '18',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -379,6 +427,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
                  '800' => __('800', 'horeca'),
              ],
              'default' => '500',
+             'condition' => [
+					'item_type' => 'product',
+				],
          ]
       	);
 		$repeater->add_control(
@@ -386,6 +437,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Title Color', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -394,6 +448,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Description', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -403,6 +460,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'placeholder' => esc_html__( 'Dish Description goes here.', 'horeca' ),
 				'default' => 'Tomatoes, green bell pepper, sliced cucumber onion, olives and feta cheese.',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			],
 		);
 		$repeater->add_control(
@@ -411,6 +471,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Description Font size', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'default' => '15',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -428,6 +491,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
                  '800' => __('800', 'horeca'),
              ],
              'default' => '500',
+             'condition' => [
+					'item_type' => 'product',
+				],
          ]
       	);
 		$repeater->add_control(
@@ -435,6 +501,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Description Color', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -443,6 +512,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Label', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -454,6 +526,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label_off' => esc_html__( 'Hide', 'horeca' ),
 				'return_value' => 'yes',
 				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
 			]
 		);
 		$repeater->add_control(
@@ -462,7 +537,236 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Dish Promotion', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => esc_html__( 'Recommended', 'horeca' ),
+				'condition' => [
+					'dish_toggle' => 'yes',
+					'item_type' => 'product'
+				],
 			]
+		);
+		$repeater->add_control(
+			'default_heading7',
+			[
+				'label' => esc_html__( 'Badges', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::HEADING,
+				'separator' => 'before',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'badge_alignment',
+			[
+				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'label' => esc_html__( 'Badge Alignment', 'horeca' ),
+				'options' => [
+					'left' => [
+						'title' => esc_html__( 'Left', 'horeca' ),
+						'icon' => 'eicon-text-align-left',
+					],
+					'center' => [
+						'title' => esc_html__( 'Center', 'horeca' ),
+						'icon' => 'eicon-text-align-center',
+					],
+					'right' => [
+						'title' => esc_html__( 'Right', 'horeca' ),
+						'icon' => 'eicon-text-align-right',
+					],
+				],
+				'default' => 'left',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'vegan_toggle',
+			[
+				'label' => esc_html__( 'Vegan', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'gluten_toggle',
+			[
+				'label' => esc_html__( 'Gluten Free', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'spicy_toggle',
+			[
+				'label' => esc_html__( 'Spicy', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'sugar_toggle',
+			[
+				'label' => esc_html__( 'Sugar free', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'alcohol_toggle',
+			[
+				'label' => esc_html__( 'Alcoholic', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'default_heading8',
+			[
+				'label' => esc_html__( 'Nutritional Info', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::HEADING,
+				'separator' => 'before',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'calories_toggle',
+			[
+				'label' => esc_html__( 'Calories', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'calories',
+			[
+				'label' => esc_html__( 'Total Calories (Cal.)', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__( 'Calories go here.', 'horeca' ),
+				'default' => '300',
+				'condition' => [
+					'item_type' => 'product',
+					'calories_toggle' => 'yes',
+				],
+			],
+		);
+		$repeater->add_control(
+			'fat_toggle',
+			[
+				'label' => esc_html__( 'Fat', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'fat',
+			[
+				'label' => esc_html__( 'Total Fat (g)', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__( 'Fat go here.', 'horeca' ),
+				'default' => '9',
+				'condition' => [
+					'item_type' => 'product',
+					'fat_toggle' => 'yes',
+				],
+			],
+		);
+		$repeater->add_control(
+			'carbs_toggle',
+			[
+				'label' => esc_html__( 'Carbs', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'carbs',
+			[
+				'label' => esc_html__( 'Total Carbs (g)', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__( 'Carbs go here.', 'horeca' ),
+				'default' => '12',
+				'condition' => [
+					'item_type' => 'product',
+					'carbs_toggle' => 'yes',
+				],
+			],
+		);
+		$repeater->add_control(
+			'proteins_toggle',
+			[
+				'label' => esc_html__( 'Proteins', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'proteins',
+			[
+				'label' => esc_html__( 'Total Protein (g)', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__( 'Proteins go here.', 'horeca' ),
+				'default' => '15',
+				'condition' => [
+					'item_type' => 'product',
+					'proteins_toggle' => 'yes',
+				],
+			],
 		);
 		$this->add_control( 
 	        'tab1',
