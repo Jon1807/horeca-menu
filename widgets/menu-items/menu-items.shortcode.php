@@ -7,7 +7,7 @@ function horeca_menu_items_shortcode($params, $content) {
         'version'     =>'',
         'columns'     =>'',
         'alignment'     =>'',
-        'image_alignment'     =>'',
+        'layout_display'     =>'',
       ), $params ) );
 
     ob_start(); 
@@ -27,25 +27,9 @@ function horeca_menu_items_shortcode($params, $content) {
 									$dish_title = $item['dish_title'];
 									$dish_price = $item['dish_price'];
 									$dish_description = $item['dish_description'];
-									$title_color = $item['title_color'];
-									$price_color = $item['price_color'];
-									$description_color = $item['description_color'];
-									$title_size = $item['title_size'];
-									$price_size = $item['price_size'];
-									$description_size = $item['description_size'];
-									$title_weight = $item['title_weight'];
-									$price_weight = $item['price_weight'];
-									$description_weight = $item['description_weight'];
 									$dish_promotion = $item['dish_promotion'];
 									$dish_toggle = $item['dish_toggle'];	
 									$dish_heading = $item['dish_heading'];	
-									$heading_size = $item['heading_size'];	
-									$heading_weight = $item['heading_weight'];
-									$heading_color = $item['heading_color'];
-									$image_dimensions = $item['image_dimensions'];
-									$image_width = $image_dimensions['width'];
-									$image_height = $image_dimensions['height'];	
-									$layout_display = $item['layout_display'];
 									$badge_alignment = $item['badge_alignment'];
 									$calories = $item['calories'];
 									$fat = $item['fat'];
@@ -61,7 +45,7 @@ function horeca_menu_items_shortcode($params, $content) {
 								 		<?php if($item_type == "product"){ ?>
 				              <div class="horeca-menu-items-inner-container-<?php echo esc_attr($version); ?>" style="background-color:<?php echo esc_attr($card_color)?>;text-align:<?php echo esc_attr($alignment)?>;display:<?php echo esc_attr($layout_display)?>">
 				              	<?php if(!empty($dish_image)){?>
-											    <div class="horeca-menu-items-img-holder" style="justify-content:<?php echo esc_attr($image_alignment)?>;">
+											    <div class="horeca-menu-items-img-holder">
 											      <img src="<?php echo esc_url($dish_image); ?>" alt="menu-items-image" width="<?php echo esc_attr( $image_width ); ?>px" height="<?php echo esc_attr( $image_height ); ?>px">
 											    </div>
 										 		<?php }?>

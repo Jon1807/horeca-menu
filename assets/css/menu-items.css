@@ -57,11 +57,17 @@
 .horeca-menu-items-badges{
 	padding: 5px 0px;
 }
-.horeca-svg{
-	border: 1px solid #000;
-  border-radius: 50px;
-  font-size: 25px;
-  padding: 2px;
+.horeca-svg {
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-size: 25px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+.horeca-svg path {
+    fill: #000;
 }
 /*dish items v1*/
 
@@ -71,14 +77,16 @@
   padding:20px 40px;
 }
 .horeca-menu-items-inner-container-v1 .horeca-menu-items-img-holder img{
+  width: 100px;
+  height: 100px;
   max-width: fit-content;
 }
 .horeca-menu-items-inner-container-v1 .horeca-menu-items-img-holder{
 	object-fit: cover;
-  padding-left: 20px;
+	padding: 20px;
 }
 .horeca-menu-items-inner-container-v1 .horeca-menu-items-content{
-	padding: 10px 20px;
+	padding: 10px;
 }
 .horeca-menu-items-inner-container-v1 .horeca-menu-items-title{
 	font-size: 20px;
@@ -124,14 +132,16 @@
   padding:10px 40px;
 }
 .horeca-menu-items-inner-container-v2 .horeca-menu-items-img-holder img{
+ 	width: 100px;
+  height: 100px;
   max-width: fit-content;
 }
 .horeca-menu-items-inner-container-v2 .horeca-menu-items-img-holder{
 	object-fit: cover;
-  padding-left: 20px;
+	padding: 20px;
 }
 .horeca-menu-items-inner-container-v2 .horeca-menu-items-content{
-	padding: 10px 20px;
+	padding: 10px;
 }
 .horeca-menu-items-inner-container-v2 .horeca-menu-items-title{
 	font-size: 20px;
@@ -174,14 +184,15 @@
   margin-bottom:10px;
 }
 .horeca-menu-items-inner-container-v3 .horeca-menu-items-img-holder img{
-  max-width: fit-content;
+  width: 100px;
+  height: 100px;
 }
 .horeca-menu-items-inner-container-v3 .horeca-menu-items-img-holder{
 	object-fit: cover;
-  padding-left: 20px;
+	padding: 20px;
 }
 .horeca-menu-items-inner-container-v3 .horeca-menu-items-content{
-	padding: 10px 20px;
+	padding: 10px;
 }
 .horeca-menu-items-inner-container-v3 .horeca-menu-items-title{
 	font-size: 20px;

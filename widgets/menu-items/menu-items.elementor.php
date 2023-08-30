@@ -131,32 +131,22 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			]
 		);
 		$this->add_control(
-			'alignment',
+			'layout_display',
 			[
-				'type' => \Elementor\Controls_Manager::CHOOSE,
-				'label' => esc_html__( 'Text Alignment', 'horeca' ),
+				'label' => esc_html__( 'Layout', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'flex',
 				'options' => [
-					'left' => [
-						'title' => esc_html__( 'Left', 'horeca' ),
-						'icon' => 'eicon-text-align-left',
-					],
-					'center' => [
-						'title' => esc_html__( 'Center', 'horeca' ),
-						'icon' => 'eicon-text-align-center',
-					],
-					'right' => [
-						'title' => esc_html__( 'Right', 'horeca' ),
-						'icon' => 'eicon-text-align-right',
-					],
+					'flex' => esc_html__( 'List', 'horeca' ),
+					'block'  => esc_html__( 'Grid', 'horeca' ),
 				],
-				'default' => 'left',
 			]
 		);
 		$this->add_control(
-			'image_alignment',
+			'alignment',
 			[
 				'type' => \Elementor\Controls_Manager::CHOOSE,
-				'label' => esc_html__( 'Image Alignment', 'horeca' ),
+				'label' => esc_html__( 'Content Alignment', 'horeca' ),
 				'options' => [
 					'left' => [
 						'title' => esc_html__( 'Left', 'horeca' ),
@@ -190,39 +180,8 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'product',
                'options' => [
-                 'product' => esc_html__( 'Product', 'horeca' ),
+                 'product' => esc_html__( 'Custom Item', 'horeca' ),
                  'heading' => esc_html__( 'Heading', 'horeca' ),
-				],
-			]
-		);
-		$repeater->add_control(
-			'layout_heading',
-			[
-				'label' => esc_html__( 'Item Layout', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
-			]
-		);
-		$repeater->add_control(
-			'layout_display',
-			[
-				'label' => esc_html__( 'Layout', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'flex',
-				'options' => [
-					'flex' => esc_html__( 'List', 'horeca' ),
-					'block'  => esc_html__( 'Grid', 'horeca' ),
-				],
-			]
-		);
-		$repeater->add_control(
-			'default_heading1',
-			[
-				'label' => esc_html__( 'Heading', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
-				'condition' => [
-					'item_type' => 'heading',
 				],
 			]
 		);
@@ -238,88 +197,10 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			],
 		);
 		$repeater->add_control(
-			'heading_size',
-			[
-				'label' => esc_html__( 'Heading Font size', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::NUMBER,
-				'default' => '30',
-				'condition' => [
-					'item_type' => 'heading',
-				],
-			]
-		);
-		$repeater->add_control(
-         'heading_weight',
-         [
-             'label' => esc_html__('Heading Font weight', 'horeca'),
-             'label_block' => true,
-             'type' => \Elementor\Controls_Manager::SELECT,
-             'condition' => [
-					'item_type' => 'heading',
-				],
-             'options' => [
-                 '' => __('Select', 'horeca'),
-                 '400' => __('400', 'horeca'),
-                 '500' => __('500', 'horeca'),
-                 '600' => __('600', 'horeca'),
-                 '700' => __('700', 'horeca'),
-                 '800' => __('800', 'horeca'),
-             ],
-             'default' => '500',
-         ]
-      	);
-		$repeater->add_control(
-			'heading_color',
-			[
-				'label' => esc_html__( 'Heading Color', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'condition' => [
-					'item_type' => 'heading',
-				],
-			]
-		);
-		$repeater->add_control(
-			'default_heading2',
-			[
-				'label' => esc_html__( 'Image Settings', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
 			'dish_image',
 			[
 				'label' => esc_html__( 'Image', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
-	  	'image_dimensions',
-		  [
-		    'type' => \Elementor\Controls_Manager::IMAGE_DIMENSIONS,
-		    'label' => __( 'Image Dimensions', 'horeca' ),
-		    'condition' => [
-				'item_type' => 'product',
-			],
-		    'default' => [
-		      'width' => '100',
-		      'height' => '100',
-		      'unit' => 'px',
-		    ],
-		  ]
-		);
-		$repeater->add_control(
-			'default_heading3',
-			[
-				'label' => esc_html__( 'Title', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
 				'condition' => [
 					'item_type' => 'product',
 				],
@@ -338,58 +219,6 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			],
 		);
 		$repeater->add_control(
-			'title_size',
-			[
-				'label' => esc_html__( 'Title Font size', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::NUMBER,
-				'default' => '20',
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
-         'title_weight',
-         [
-             'label' => esc_html__('Title Font weight', 'horeca'),
-             'label_block' => true,
-             'type' => \Elementor\Controls_Manager::SELECT,
-             'options' => [
-                 '' => __('Select', 'horeca'),
-                 '400' => __('400', 'horeca'),
-                 '500' => __('500', 'horeca'),
-                 '600' => __('600', 'horeca'),
-                 '700' => __('700', 'horeca'),
-                 '800' => __('800', 'horeca'),
-             ],
-             'default' => '500',
-             'condition' => [
-					'item_type' => 'product',
-				],
-         ]
-      	);
-		$repeater->add_control(
-			'title_color',
-			[
-				'label' => esc_html__( 'Title Color', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
-			'default_heading4',
-			[
-				'label' => esc_html__( 'Price', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
 			'dish_price',
 			[
 				'label' => esc_html__( 'Dish Price', 'horeca' ),
@@ -402,58 +231,6 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			],
 		);
 		$repeater->add_control(
-			'price_size',
-			[
-				'label' => esc_html__( 'Price Font size', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::NUMBER,
-				'default' => '18',
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
-         'price_weight',
-         [
-             'label' => esc_html__('Price Font weight', 'horeca'),
-             'label_block' => true,
-             'type' => \Elementor\Controls_Manager::SELECT,
-             'options' => [
-                 '' => __('Select', 'horeca'),
-                 '400' => __('400', 'horeca'),
-                 '500' => __('500', 'horeca'),
-                 '600' => __('600', 'horeca'),
-                 '700' => __('700', 'horeca'),
-                 '800' => __('800', 'horeca'),
-             ],
-             'default' => '500',
-             'condition' => [
-					'item_type' => 'product',
-				],
-         ]
-      	);
-		$repeater->add_control(
-			'price_color',
-			[
-				'label' => esc_html__( 'Title Color', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
-			'default_heading5',
-			[
-				'label' => esc_html__( 'Description', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
 			'dish_description',
 			[
 				'label' => esc_html__( 'Dish Description', 'horeca' ),
@@ -464,58 +241,6 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 					'item_type' => 'product',
 				],
 			],
-		);
-		$repeater->add_control(
-			'description_size',
-			[
-				'label' => esc_html__( 'Description Font size', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::NUMBER,
-				'default' => '15',
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
-         'description_weight',
-         [
-             'label' => esc_html__('Description Font weight', 'horeca'),
-             'label_block' => true,
-             'type' => \Elementor\Controls_Manager::SELECT,
-             'options' => [
-                 '' => __('Select', 'horeca'),
-                 '400' => __('400', 'horeca'),
-                 '500' => __('500', 'horeca'),
-                 '600' => __('600', 'horeca'),
-                 '700' => __('700', 'horeca'),
-                 '800' => __('800', 'horeca'),
-             ],
-             'default' => '500',
-             'condition' => [
-					'item_type' => 'product',
-				],
-         ]
-      	);
-		$repeater->add_control(
-			'description_color',
-			[
-				'label' => esc_html__( 'Description Color', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
-		);
-		$repeater->add_control(
-			'default_heading6',
-			[
-				'label' => esc_html__( 'Label', 'horeca' ),
-				'type' => \Elementor\Controls_Manager::HEADING,
-				'separator' => 'before',
-				'condition' => [
-					'item_type' => 'product',
-				],
-			]
 		);
 		$repeater->add_control(
 			'dish_toggle',
@@ -544,7 +269,7 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			]
 		);
 		$repeater->add_control(
-			'default_heading7',
+			'default_heading_badge',
 			[
 				'label' => esc_html__( 'Badges', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
@@ -650,7 +375,7 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			]
 		);
 		$repeater->add_control(
-			'default_heading8',
+			'default_heading_nutritional',
 			[
 				'label' => esc_html__( 'Nutritional Info', 'horeca' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
@@ -779,43 +504,37 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 						'dish_heading' => esc_html__( 'APPETIZERS', 'horeca' ),
 						'dish_title' => esc_html__( 'Greek Salad', 'horeca' ),
 						'dish_price' => esc_html__( '$25.50', 'horeca' ),
-						'dish_description' => esc_html__( 'Tomatoes, green bell pepper, sliced cucumber
-						 onion, olives, and feta cheese.', 'horeca' ),
+						'dish_description' => esc_html__( 'Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.', 'horeca' ),
 					],
 					[
 						'dish_heading' => esc_html__( 'MAINS', 'horeca' ),
 						'dish_title' => esc_html__( 'Lasagne', 'horeca' ),
 						'dish_price' => esc_html__( '$40.00', 'horeca' ),
-						'dish_description' => esc_html__( 'Vegetables, cheeses, ground meats, tomato
-						 sauce, seasonings and spices.', 'horeca' ),
+						'dish_description' => esc_html__( 'Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.', 'horeca' ),
 					],
 					[
 						'dish_heading' => esc_html__( 'EXTRAS', 'horeca' ),
 						'dish_title' => esc_html__( 'Butternut Pumpkin', 'horeca' ),
 						'dish_price' => esc_html__( '$30.55', 'horeca' ),
-						'dish_description' => esc_html__( 'Typesetting industry simply dummy Ipsum is
-						 simply dummy text of the priands.', 'horeca' ),
+						'dish_description' => esc_html__( 'Typesetting industry simply dummy Ipsum is simply dummy text of the priands.', 'horeca' ),
 					],
 					[
 						'dish_heading' => esc_html__( 'SODAS', 'horeca' ),
 						'dish_title' => esc_html__( 'Tokusen Wagyu', 'horeca' ),
 						'dish_price' => esc_html__( '$39.00', 'horeca' ),
-						'dish_description' => esc_html__( 'Vegetables, cheeses, ground meats, tomato
-						 sauce, seasonings and spices.', 'horeca' ),
+						'dish_description' => esc_html__( 'Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.', 'horeca' ),
 					],
 					[
 						'dish_heading' => esc_html__( 'WINES', 'horeca' ),
 						'dish_title' => esc_html__( 'Opu Fish', 'horeca' ),
 						'dish_price' => esc_html__( '$40.00', 'horeca' ),
-						'dish_description' => esc_html__( 'Avocados with crab meat, red onion, crab salad
-						 stuffed red bell pepper and green bell pepper.', 'horeca' ),
+						'dish_description' => esc_html__( 'Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.', 'horeca' ),
 					],
 					[
 						'dish_heading' => esc_html__( 'COCKTAILS', 'horeca' ),
 						'dish_title' => esc_html__( 'Olivas Rellenas', 'horeca' ),
 						'dish_price' => esc_html__( '$30.55', 'horeca' ),
-						'dish_description' => esc_html__( 'Vegetables, cheeses, ground meats, tomato
-						 sauce, seasonings and spices.', 'horeca' ),
+						'dish_description' => esc_html__( 'Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.', 'horeca' ),
 					],
 				],
 	        ]
@@ -839,8 +558,72 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			[
-				'name' => 'content_typography',
-				'selector' => '{{WRAPPER}} .horeca-menu-items-container',
+				'label' => esc_html__( 'Heading Tipography', 'horeca' ),
+				'name' => 'heading_typography',
+				'selector' => '{{WRAPPER}} .horeca-menu-items-inner-heading',
+			]
+		);
+		$this->add_control(
+			'heading_color',
+			[
+				'label' => esc_html__( 'Heading Color', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .horeca-menu-items-inner-heading' => 'color: {{VALUE}}',
+				],
+			]
+		);
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[	'label' => esc_html__( 'Title Tipography', 'horeca' ),
+				'name' => 'title_typography',
+				'selector' => '{{WRAPPER}} .horeca-menu-items-title',
+			]
+		);
+		$this->add_control(
+			'title_color',
+			[
+				'label' => esc_html__( 'Title Color', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .horeca-menu-items-title' => 'color: {{VALUE}}',
+				],
+			]
+		);
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'label' => esc_html__( 'Price Tipography', 'horeca' ),
+				'name' => 'price_typography',
+				'selector' => '{{WRAPPER}} .horeca-menu-items-price',
+			]
+		);
+		$this->add_control(
+			'price_color',
+			[
+				'label' => esc_html__( 'Price Color', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .horeca-menu-items-price' => 'color: {{VALUE}}',
+				],
+			]
+		);
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'label' => esc_html__( 'Description Tipography', 'horeca' ),
+				'name' => 'description_typography',
+				'selector' => '{{WRAPPER}} .horeca-menu-items-description',
+			]
+		);
+		$this->add_control(
+			'description_color',
+			[
+				'label' => esc_html__( 'Description Color', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .horeca-menu-items-description' => 'color: {{VALUE}}',
+				],
 			]
 		);
 
@@ -863,11 +646,9 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 		$version = $settings['version'];
 		$columns = $settings['columns'];
 		$alignment = $settings['alignment'];
-		$image_alignment = $settings['image_alignment'];
+		$layout_display = $settings['layout_display'];
 
-		echo do_shortcode('[horeca-menu-items tab1="'.base64_encode(serialize($tab1)).'" version="'.$version.'" columns="'.$columns.'" alignment="'.$alignment.'" image_alignment="'.$image_alignment.'" ]');
-		?>
-<?php
+		echo do_shortcode('[horeca-menu-items tab1="'.base64_encode(serialize($tab1)).'" version="'.$version.'" columns="'.$columns.'" alignment="'.$alignment.'" layout_display="'.$layout_display.'" ]');
 	}						
 }
 
