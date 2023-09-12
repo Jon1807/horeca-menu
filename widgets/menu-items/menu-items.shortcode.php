@@ -38,7 +38,7 @@ function horeca_menu_items_shortcode($params, $content) {
 			            ?>
 				            <?php if($item_type == "heading"){ ?>
 				            	<div class="horeca-menu-items-heading">
-									 			<h2 class="horeca-menu-items-inner-heading" style="color:<?php echo esc_attr($heading_color)?>;font-weight:<?php echo esc_attr($heading_weight)?>;font-size:<?php echo esc_attr($heading_size)?>px"><?php echo esc_html($dish_heading);  ?> 
+									 			<h2 class="horeca-menu-items-inner-heading" style="color:<?php echo esc_attr($heading_color)?>"><?php echo esc_html($dish_heading);  ?> 
 									 			</h2>
 								 			</div>
 								 		<?php } ?>
