@@ -31,7 +31,7 @@ function horeca_custom_widgets( $widgets_manager ) {
 
     require_once( __DIR__ . '/widgets/social-media-links/social-media-links.elementor.php' );
     require_once( __DIR__ . '/widgets/menu-items/menu-items.elementor.php' );
-    
+    require_once( __DIR__ . '/widgets/about-me/about-me.elementor.php' );
     $widgets_manager->register( new \Horeca_Social_Media_Links() );
     $widgets_manager->register( new \Horeca_Menu_Items() );
 }
@@ -40,6 +40,7 @@ add_action( 'elementor/widgets/register', 'horeca_custom_widgets' );
 function horeca_bio_links_styles() {
     wp_enqueue_style( 'horeca-menu-items', plugins_url( 'assets/css/menu-items.css', __FILE__ ), array(), '1.0.0', 'all' );
     wp_enqueue_style( 'horeca-social-media-links', plugins_url( 'assets/css/social-media-links.css', __FILE__ ), array(), '1.0.0', 'all' );
+    wp_enqueue_style( 'horeca-about-me', plugins_url( 'assets/css/about-me.css', __FILE__ ), array(), '1.0.0', 'all' );
     wp_enqueue_style( 'bootstrap', plugins_url( 'assets/css/bootstrap.min.css', __FILE__ ), array(), '1.0.0', 'all' );
 
 }
@@ -59,3 +60,4 @@ add_action( 'plugins_loaded', 'horeca_load_textdomain' );
 
 require_once( __DIR__ . '/widgets/social-media-links/social-media-links.shortcode.php' );
 require_once( __DIR__ . '/widgets/menu-items/menu-items.shortcode.php' );
+require_once( __DIR__ . '/widgets/about-me/about-me.shortcode.php' );
