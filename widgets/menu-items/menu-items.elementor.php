@@ -257,6 +257,20 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			]
 		);
 		$repeater->add_control(
+			'cart_toggle',
+			[
+				'label' => esc_html__( '"Add to cart" button', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
 			'dish_promotion',
 			[
 				'label' => esc_html__( 'Dish Promotion', 'horeca' ),

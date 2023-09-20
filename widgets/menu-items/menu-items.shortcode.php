@@ -15,14 +15,12 @@ function horeca_menu_items_shortcode($params, $content) {
     $tab1 = unserialize(base64_decode($tab1)); 
     ?>
 			<div class="horeca-menu-items-container">
-				<div class="horeca-menu-tab">
-					<input id="horeca-menu-tab1" type="radio" name="pct" checked="checked">
+				<div class="horeca-menu-tabs">
 				  <section class="horeca-menu-section">
 				    <div class="horeca-menu-tab1 horeca-menu-tab1-<?php echo esc_attr($version); ?>" style="-webkit-columns:<?php echo esc_attr($columns)?>">
 				      <?php if ($tab1) {
 								foreach ( $tab1 as $item ) {
 									$item_type = $item['item_type'];
-									$card_color = $item['card_color'];
 									$dish_image = $item['dish_image']['url'];
 									$dish_title = $item['dish_title'];
 									$dish_price = $item['dish_price'];
@@ -34,16 +32,16 @@ function horeca_menu_items_shortcode($params, $content) {
 									$calories = $item['calories'];
 									$fat = $item['fat'];
 									$carbs = $item['carbs'];
-									$proteins = $item['proteins'];							
+									$proteins = $item['proteins'];
 			            ?>
 				            <?php if($item_type == "heading"){ ?>
 				            	<div class="horeca-menu-items-heading">
-									 			<h2 class="horeca-menu-items-inner-heading" style="color:<?php echo esc_attr($heading_color)?>"><?php echo esc_html($dish_heading);  ?> 
+									 			<h2 class="horeca-menu-items-inner-heading" style="color:<?php echo esc_attr($heading_color)?>;"><?php echo esc_html($dish_heading);  ?> 
 									 			</h2>
 								 			</div>
 								 		<?php } ?>
 								 		<?php if($item_type == "product"){ ?>
-				              <div class="horeca-menu-items-inner-container-<?php echo esc_attr($version); ?>" style="background-color:<?php echo esc_attr($card_color)?>;text-align:<?php echo esc_attr($alignment)?>;display:<?php echo esc_attr($layout_display)?>">
+				              <div class="horeca-menu-items-inner-container-<?php echo esc_attr($version); ?>" style="text-align:<?php echo esc_attr($alignment)?>;display:<?php echo esc_attr($layout_display)?>">
 				              	<?php if(!empty($dish_image)){?>
 											    <div class="horeca-menu-items-img-holder">
 											      <img src="<?php echo esc_url($dish_image); ?>" alt="menu-items-image" width="<?php echo esc_attr( $image_width ); ?>px" height="<?php echo esc_attr( $image_height ); ?>px">
@@ -52,7 +50,7 @@ function horeca_menu_items_shortcode($params, $content) {
 										 		<div class="horeca-menu-items-content">
 										 			<div class="horeca-menu-items-upper-content" style="display:<?php echo esc_attr($layout_display)?>">
 									          <?php if(!empty($dish_title)){ ?>
-											        <div class="horeca-menu-items-title" style="color:<?php echo esc_attr($title_color)?>;font-weight:<?php echo esc_attr($title_weight)?>;font-size:<?php echo esc_attr($title_size)?>px">
+											        <div class="horeca-menu-items-title">
 										          	<?php echo esc_html($dish_title);  ?>
 											        </div>
 										        <?php } ?>
@@ -60,13 +58,14 @@ function horeca_menu_items_shortcode($params, $content) {
 										       	 <div class="horeca-menu-items-line"></div>
 										         <?php } ?>
 										        <?php if(!empty($dish_price)){ ?>
-											        <div class="horeca-menu-items-price" style="color:<?php echo esc_attr($price_color)?>;font-weight:<?php echo esc_attr($price_weight)?>;font-size:<?php echo esc_attr($price_size)?>px">
-										          	<?php echo esc_html($dish_price);  ?>
+											        <div class="horeca-menu-items-price">
+										          	$<?php echo esc_html($dish_price);  ?>
 											        </div>
 										        <?php } ?>
+										        	
 									      	</div> 
 									      	<div class="horeca-menu-items-bottom-content">
-										        <div class="horeca-menu-items-description" style="color:<?php echo esc_attr($description_color)?>;font-weight:<?php echo esc_attr($description_weight)?>;font-size:<?php echo esc_attr($description_size)?>px">
+										        <div class="horeca-menu-items-description">
 									          	<?php echo esc_html($dish_description);  ?>
 										        </div>
 										        <?php if ( 'yes' === $item['dish_toggle'] ) { ?>
@@ -75,6 +74,9 @@ function horeca_menu_items_shortcode($params, $content) {
 										        			<?php echo esc_html($dish_promotion);  ?>
 										        		</span>
 										        	</div>
+										        <?php } ?>
+										        <?php if('yes' === $item['cart_toggle']) { ?>
+										        	<a href="#" data-name="<?php echo esc_html($dish_title);  ?>" data-price="<?php echo esc_html($dish_price);  ?>" class="add-to-cart btn btn-primary"><div class="dashicons dashicons-plus"></div></a>
 										        <?php } ?>
 										      </div>
 										      <div class="horeca-menu-items-badges" style="text-align:<?php echo esc_attr($badge_alignment)?>">
