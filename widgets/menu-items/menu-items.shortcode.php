@@ -29,6 +29,7 @@ function horeca_menu_items_shortcode($params, $content) {
 									$dish_toggle = $item['dish_toggle'];	
 									$dish_heading = $item['dish_heading'];	
 									$badge_alignment = $item['badge_alignment'];
+									$grams = $item['grams'];
 									$calories = $item['calories'];
 									$fat = $item['fat'];
 									$carbs = $item['carbs'];
@@ -97,6 +98,9 @@ function horeca_menu_items_shortcode($params, $content) {
 											      <?php } ?>
 										    	</div>
 										    	<div class="horeca-menu-items-nutritional-info" style="text-align:<?php echo esc_attr($badge_alignment)?>">
+										    		<?php if ( 'yes' === $item['grams_toggle'] ) { ?>
+										    			<?php echo esc_html($grams);  ?>g
+										    		<?php } ?>
 										    		<?php if ( 'yes' === $item['calories_toggle'] ) { ?>
 										    			<?php echo esc_html($calories);  ?>Cal
 										    		<?php } ?>

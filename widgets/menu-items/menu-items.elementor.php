@@ -400,6 +400,33 @@ class Horeca_Menu_Items extends \Elementor\Widget_Base {
 			]
 		);
 		$repeater->add_control(
+			'grams_toggle',
+			[
+				'label' => esc_html__( 'Grams', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'horeca' ),
+				'label_off' => esc_html__( 'Hide', 'horeca' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+				'condition' => [
+					'item_type' => 'product',
+				],
+			]
+		);
+		$repeater->add_control(
+			'grams',
+			[
+				'label' => esc_html__( 'Total Grams (Gr.)', 'horeca' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__( 'Grams go here.', 'horeca' ),
+				'default' => '600',
+				'condition' => [
+					'item_type' => 'product',
+					'grams_toggle' => 'yes',
+				],
+			],
+		);
+		$repeater->add_control(
 			'calories_toggle',
 			[
 				'label' => esc_html__( 'Calories', 'horeca' ),
