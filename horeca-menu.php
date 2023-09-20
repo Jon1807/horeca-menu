@@ -44,7 +44,6 @@ if( !function_exists('horeca_bio_links_styles') ) {
         wp_enqueue_style( 'horeca-menu-items', plugins_url( 'assets/css/menu-items.css', __FILE__ ), array(), '1.0.0', 'all' );
         wp_enqueue_style( 'horeca-social-media-links', plugins_url( 'assets/css/social-media-links.css', __FILE__ ), array(), '1.0.0', 'all' );
         wp_enqueue_style( 'horeca-about-me', plugins_url( 'assets/css/about-me.css', __FILE__ ), array(), '1.0.0', 'all' );
-        wp_enqueue_style( 'bootstrap', plugins_url( 'assets/css/bootstrap.min.css', __FILE__ ), array(), '1.0.0', 'all' );
 
     }
     add_action( 'wp_enqueue_scripts', 'horeca_bio_links_styles' );
